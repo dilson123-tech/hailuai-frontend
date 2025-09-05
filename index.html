@@ -1,181 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HailuAI — Inteligência Artificial para Empresas</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #3c3753, #423778);
-      color: #e1c3c6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DilsAI — Inteligência com alma</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="DilsAI — Sua IA pessoal feita no Brasil para o mundo." />
 
-    header {
-      padding: 40px 20px 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin: 0 0 10px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin: 0 0 30px;
-    }
-
-    .form-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-
-    #mensagem {
-      width: 80%;
-      max-width: 600px;
-      padding: 15px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      margin-bottom: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    button {
-      background: #00ffcc;
-      color: #000;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin: 0 10px;
-      transition: 0.3s;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-
-    button:hover {
-      background: #00ccaa;
-    }
-
-    #resposta {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background: rgba(0,0,0,0.2);
-      border-radius: 10px;
-      font-size: 1.1rem;
-    }
-
-    .botoes {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .typing {
-      font-style: italic;
-      font-size: 1rem;
-      color: #886b6b;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .typing::after {
-      content: '';
-      width: 8px;
-      height: 8px;
-      margin-left: 10px;
-      border-radius: 50%;
-      background: #00ffcc;
-      animation: blink 1s infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 0; }
-      50% { opacity: 1; }
-    }
-
-    footer {
-      margin-top: auto;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.2);
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: #00ffcc;
-      text-decoration: none;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      #mensagem {
-        width: 95%;
-        font-size: 0.95rem;
-      }
-
-      button {
-        width: 100%;
-        margin: 10px 0;
-      }
-
-      .botoes {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      #resposta {
-        font-size: 1rem;
-        padding: 15px;
-      }
-    }
-  </style>
+  <!-- DilsAI: SEO & Social -->
+  <link rel="icon" href="DilsAI_Logo.png" type="image/png">
+  <meta name="theme-color" content="#007BFF">
+  <meta property="og:title" content="DilsAI — Inteligência com alma">
+  <meta property="og:description" content="Sua IA pessoal feita no Brasil para o mundo.">
+  <meta property="og:image" content="DilsAI_Logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DilsAI — Inteligência com alma">
+  <meta name="twitter:description" content="Seu assistente pessoal e profissional: texto, ideias e automação.">
+  <meta name="twitter:image" content="DilsAI_Logo.png">
 </head>
 <body>
-  <header>
-    <h1>HailuAI</h1>
-    <p>Soluções de Inteligência Artificial para empresas que querem crescer com tecnologia.</p>
+  <header class="nav">
+    <div class="container nav__inner">
+      <div class="brand">
+        <img src="DilsAI_Logo.png" alt="Logo DilsAI" class="logo" onerror="this.replaceWith(document.createTextNode('DilsAI'))">
+      </div>
+      <nav aria-label="Navegação principal">
+        <a href="#features">Recursos</a>
+        <a href="#plans">Planos</a>
+        <a href="#cta" class="btn btn--ghost">Experimente</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="form-container">
-    <form id="chatForm">
-      <textarea id="mensagem" rows="4" placeholder="Digite sua pergunta..."></textarea>
-      <div class="botoes">
-        <button type="submit" class="cta">Enviar</button>
-        <button type="button" id="limparBtn" class="cta">Limpar</button>
+  <section class="hero">
+    <div class="container hero__inner">
+      <h1>DilsAI — Inteligência com alma, feita no Brasil para o mundo.</h1>
+      <p>Seu assistente pessoal e profissional: texto, ideias, automação e produtividade em um só lugar.</p>
+      <div class="hero__cta">
+        <a id="cta-btn" href="#cta" class="btn btn--primary">Experimente agora</a>
+        <a href="#plans" class="btn btn--quiet">Ver planos</a>
       </div>
-    </form>
-    <div id="resposta"></div>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    <p>
-      🌐 <a href="https://github.com/dilson123-tech/hailuai" target="_blank">GitHub do Projeto</a> &nbsp;|&nbsp;
-      👨‍💼 <a href="https://www.linkedin.com/in/dilsonpereira/" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
-      📧 <a href="mailto:dilsonpereira231@gmail.com">E-mail Profissional</a>
-    </p>
-    <p style="margin-top: 10px; font-size: 0.8rem;">
-      © 2025 HailuAI — Desenvolvido com 💻 por Dilson Pereira
-    </p>
+  <section id="features" class="features">
+    <div class="container grid-3">
+      <div class="card">
+        <h3>Escreve & Cria</h3>
+        <p>Roteiros, e-mails, propostas e posts com qualidade de nível profissional.</p>
+      </div>
+      <div class="card">
+        <h3>Resolve & Automatiza</h3>
+        <p>Resumo, análise e fluxos práticos para acelerar seu dia a dia.</p>
+      </div>
+      <div class="card">
+        <h3>Aprende com Você</h3>
+        <p>Memória opcional para responder no seu tom e com seu contexto.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans" class="plans">
+    <div class="container">
+      <h2>Planos simples, valor real</h2>
+      <div class="toggle">
+        <span>Mensal</span>
+        <label class="switch">
+          <input id="billing-toggle" type="checkbox" />
+          <span class="slider"></span>
+        </label>
+        <span>Anual <small class="save">economize 2 meses</small></span>
+      </div>
+
+      <div class="grid-3">
+        <div class="card plan">
+          <h3>Starter</h3>
+          <p class="price"><span data-price-m="R$ 29,90/mês" data-price-y="R$ 299/ano">R$ 29,90/mês</span></p>
+          <ul>
+            <li>Chat básico ilimitado</li>
+            <li>Modelos padrão</li>
+            <li>Suporte por e-mail</li>
+          </ul>
+          <a href="#cta" class="btn btn--primary">Começar</a>
+        </div>
+
+        <div class="card plan plan--highlight">
+          <h3>Pro</h3>
+          <p class="price"><span data-price-m="R$ 59,90/mês" data-price-y="R$ 599/ano">R$ 59,90/mês</span></p>
+          <ul>
+            <li>Modelos avançados (GPT-4o/5)*</li>
+            <li>Memória personalizada</li>
+            <li>Prioridade no suporte</li>
+          </ul>
+          <a href="#cta" class="btn btn--primary">Assinar Pro</a>
+        </div>
+
+        <div class="card plan">
+          <h3>Empresas</h3>
+          <p class="price">Sob consulta</p>
+          <ul>
+            <li>SSO & controle de acesso</li>
+            <li>Logs e auditoria</li>
+            <li>SLA e integração</li>
+          </ul>
+          <a href="#cta" class="btn btn--outline">Falar com vendas</a>
+        </div>
+      </div>
+      <p class="footnote">* Sujeito à disponibilidade de provedores oficiais.</p>
+    </div>
+  </section>
+
+  <section id="cta" class="cta">
+    <div class="container cta__inner">
+      <h2>Pronta pra testar o DilsAI?</h2>
+      <p>Em segundos você já está conversando com sua IA com alma.</p>
+      <a href="#" class="btn btn--primary">Entrar / Criar conta</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> DilsAI. Todos os direitos reservados.</span>
+      <nav aria-label="Links do rodapé">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Contato</a>
+      </nav>
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+HTML
